@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" const="text/html;charset=UTF-8" />
+  <title>Страница проходов</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<header>
+  <p>
+    Welcome, have a nice day!
+  </p>
+</header>
+<hr>
+<main>
+  <p>
+    <span id="name"></span>
+  </p>
+  <img src="" alt="" id="photo">
+  <p id="answer"></p>
+</main>
+<hr>
+<footer>
+  <p>
+    <span id="date"></span>
+  </p>
+</footer>
+<script>
+  setInterval(() => {
+    const date = (new Date()).toLocaleDateString()+ ' ' + (new Date()).toLocaleTimeString();
+    document.querySelector('#date').innerHTML = date;
+  }, 1000);
+</script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="/javascripts/monitor.js"></script>
+</body>
+</html>
